@@ -1,5 +1,4 @@
 import socket
-import sys
 from _thread import start_new_thread
 
 def handle_client(conn):
