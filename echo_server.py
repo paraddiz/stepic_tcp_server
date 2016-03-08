@@ -10,9 +10,7 @@ while True:
     while True:
         data = conn.recv(1024)
         if not data: break
-        if data.decode().lower() == "close".lower():
-            conn.close()
-            sys.exit(0)
+        if data.decode().lower() == "close".lower(): break
         print(data)
         conn.send(data)
     conn.close()
